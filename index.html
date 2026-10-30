@@ -13,8 +13,8 @@
             --bone-white: #f5f2eb;
             --bone-muted: rgba(245, 242, 235, 0.68);
             --emerald-glow: #10b981;
-            --glass-border: rgba(245, 242, 235, 0.2);
-            --glass-highlight: rgba(255, 255, 255, 0.38);
+            --glass-border: rgba(245, 242, 235, 0.22);
+            --glass-highlight: rgba(255, 255, 255, 0.4);
             --glass-surface: rgba(16, 21, 34, 0.58);
         }
 
@@ -39,7 +39,7 @@
             width: 100vw;
             height: 100vh;
             overflow: hidden;
-            background: radial-gradient(circle at 50% 45%, var(--bg-charcoal) 0%, var(--bg-navy) 55%, var(--bg-deep) 100%);
+            background: radial-gradient(circle at 50% 48%, var(--bg-charcoal) 0%, var(--bg-navy) 52%, var(--bg-deep) 100%);
             color: var(--bone-white);
             font-family: "JetBrains Mono", "Fira Code", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
             -webkit-font-smoothing: antialiased;
@@ -76,7 +76,7 @@
             justify-content: center;
             gap: 24px;
             text-align: center;
-            max-width: 720px;
+            max-width: 740px;
             width: 100%;
             pointer-events: none;
             position: relative;
@@ -88,12 +88,12 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: clamp(340px, 85vw, 680px);
-            height: 240px;
-            background: radial-gradient(ellipse at center, rgba(8, 12, 22, 0.94) 0%, rgba(8, 12, 22, 0.72) 48%, rgba(8, 12, 22, 0) 80%);
+            width: clamp(380px, 92vw, 780px);
+            height: 290px;
+            background: radial-gradient(ellipse at center, rgba(8, 12, 22, 0.96) 0%, rgba(8, 12, 22, 0.84) 44%, rgba(8, 12, 22, 0.38) 70%, rgba(8, 12, 22, 0) 88%);
             pointer-events: none;
             z-index: -1;
-            filter: blur(18px);
+            filter: blur(22px);
         }
 
         .status-badge {
@@ -103,9 +103,9 @@
             gap: 10px;
             padding: 7px 18px;
             border-radius: 999px;
-            background: linear-gradient(135deg, rgba(245, 242, 235, 0.12) 0%, rgba(16, 21, 34, 0.65) 100%);
+            background: linear-gradient(135deg, rgba(245, 242, 235, 0.14) 0%, rgba(16, 21, 34, 0.68) 100%);
             border: 1px solid var(--glass-border);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), inset 0 1px 1px var(--glass-highlight);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.65), inset 0 1px 1px var(--glass-highlight);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             font-size: 0.78rem;
@@ -143,14 +143,11 @@
 
         .hero-title {
             pointer-events: auto;
-            font-size: clamp(2.1rem, 5.5vw, 4.25rem);
+            font-size: clamp(2.2rem, 5.8vw, 4.4rem);
             font-weight: 600;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.025em;
             color: var(--bone-white);
-            text-shadow:
-                0 0 44px rgba(0, 0, 0, 0.98),
-                0 0 28px rgba(0, 0, 0, 0.95),
-                0 4px 18px rgba(0, 0, 0, 0.9);
+            text-shadow: 0 0 48px rgba(0, 0, 0, 1), 0 0 28px rgba(0, 0, 0, 0.98), 0 4px 18px rgba(0, 0, 0, 0.95);
             line-height: 1.15;
             display: inline-flex;
             align-items: center;
@@ -196,20 +193,17 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            padding: 13px 24px;
-            border-radius: 18px;
+            padding: 13px 26px;
+            border-radius: 999px;
             font-family: inherit;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 600;
             letter-spacing: 0.02em;
             color: var(--bone-white);
             text-decoration: none;
-            background: linear-gradient(135deg, rgba(245, 242, 235, 0.16) 0%, rgba(245, 242, 235, 0.04) 50%, rgba(16, 21, 34, 0.72) 100%);
+            background: linear-gradient(135deg, rgba(245, 242, 235, 0.16) 0%, rgba(245, 242, 235, 0.04) 50%, rgba(16, 21, 34, 0.76) 100%);
             border: 1px solid rgba(245, 242, 235, 0.25);
-            box-shadow:
-                0 14px 34px rgba(0, 0, 0, 0.62),
-                inset 0 1.5px 2px rgba(255, 255, 255, 0.42),
-                inset 0 -2px 6px rgba(11, 17, 32, 0.8);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.65), inset 0 1.5px 2px rgba(255, 255, 255, 0.42), inset 0 -2px 6px rgba(10, 15, 27, 0.85);
             backdrop-filter: blur(14px) saturate(180%);
             -webkit-backdrop-filter: blur(14px) saturate(180%);
             overflow: hidden;
@@ -233,30 +227,26 @@
             content: "";
             position: absolute;
             inset: 1px;
-            border-radius: 17px;
+            border-radius: 999px;
             border: 1px solid rgba(255, 255, 255, 0.09);
             pointer-events: none;
         }
 
         .liquid-btn:hover {
-            border-color: rgba(245, 242, 235, 0.6);
-            box-shadow:
-                0 18px 42px rgba(0, 0, 0, 0.7),
-                0 0 24px rgba(0, 245, 255, 0.25),
-                inset 0 2px 3px rgba(255, 255, 255, 0.65),
-                inset 0 -2px 8px rgba(0, 245, 255, 0.24);
+            border-color: rgba(245, 242, 235, 0.65);
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.75), 0 0 24px rgba(0, 245, 255, 0.25), inset 0 2px 3px rgba(255, 255, 255, 0.65), inset 0 -2px 8px rgba(0, 245, 255, 0.24);
         }
 
         .liquid-btn svg {
-            width: 18px;
-            height: 18px;
+            width: 17px;
+            height: 17px;
             fill: none;
             stroke: currentColor;
             stroke-width: 1.9;
             stroke-linecap: round;
             stroke-linejoin: round;
             flex-shrink: 0;
-            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
         }
 
         #cursor-root {
@@ -275,13 +265,16 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 5px;
-            height: 5px;
+            width: 6px;
+            height: 6px;
+            margin-left: -3px;
+            margin-top: -3px;
             border-radius: 50%;
             background: #ffffff;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
             pointer-events: none;
             will-change: transform;
+            transition: transform 0.05s cubic-bezier(0.2, 0.9, 0.3, 1.2);
         }
 
         #cursor-droplet {
@@ -290,10 +283,11 @@
             left: 0;
             width: 44px;
             height: 44px;
-            border-radius: 50%;
-            border: 1.4px solid rgba(245, 242, 235, 0.9);
-            background: radial-gradient(circle at 32% 28%, rgba(245, 242, 235, 0.42) 0%, rgba(245, 242, 235, 0.12) 45%, rgba(245, 242, 235, 0.03) 75%, transparent 100%);
-            box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.55), 0 0 18px rgba(245, 242, 235, 0.25);
+            margin-left: -22px;
+            margin-top: -22px;
+            border: 1.4px solid rgba(245, 242, 235, 0.65);
+            background: transparent;
+            border-radius: 50% 60% 60% 50% / 50% 50% 70% 70%;
             pointer-events: none;
             will-change: transform;
         }
@@ -302,12 +296,12 @@
             position: fixed;
             top: 0;
             left: 0;
-            min-width: 230px;
+            min-width: 235px;
             padding: 8px;
             border-radius: 14px;
-            background: linear-gradient(145deg, rgba(22, 28, 44, 0.88) 0%, rgba(10, 14, 25, 0.94) 100%);
+            background: linear-gradient(145deg, rgba(20, 26, 40, 0.88) 0%, rgba(10, 14, 25, 0.94) 100%);
             border: 1px solid rgba(245, 242, 235, 0.22);
-            box-shadow: 0 22px 48px rgba(0, 0, 0, 0.7), inset 0 1px 1.5px rgba(255, 255, 255, 0.28);
+            box-shadow: 0 22px 48px rgba(0, 0, 0, 0.72), inset 0 1px 1.5px rgba(255, 255, 255, 0.28);
             backdrop-filter: blur(20px) saturate(180%);
             -webkit-backdrop-filter: blur(20px) saturate(180%);
             z-index: 1000;
@@ -382,9 +376,9 @@
             transform: translateX(-50%) translateY(24px);
             padding: 10px 20px;
             border-radius: 999px;
-            background: rgba(16, 21, 34, 0.9);
+            background: rgba(16, 21, 34, 0.92);
             border: 1px solid var(--glass-border);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), inset 0 1px 1px var(--glass-highlight);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.65), inset 0 1px 1px var(--glass-highlight);
             backdrop-filter: blur(16px);
             color: var(--bone-white);
             font-size: 0.8rem;
@@ -402,7 +396,7 @@
         .modal-backdrop {
             position: fixed;
             inset: 0;
-            background: rgba(6, 9, 16, 0.78);
+            background: rgba(8, 12, 22, 0.82);
             backdrop-filter: blur(12px);
             z-index: 900;
             display: flex;
@@ -424,9 +418,9 @@
             width: 100%;
             padding: 32px;
             border-radius: 24px;
-            background: linear-gradient(135deg, rgba(245, 242, 235, 0.14) 0%, rgba(16, 21, 34, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(245, 242, 235, 0.14) 0%, rgba(16, 21, 34, 0.92) 100%);
             border: 1px solid var(--glass-border);
-            box-shadow: 0 28px 64px rgba(0, 0, 0, 0.75), inset 0 1.5px 2px var(--glass-highlight);
+            box-shadow: 0 28px 64px rgba(0, 0, 0, 0.78), inset 0 1.5px 2px var(--glass-highlight);
             backdrop-filter: blur(20px) saturate(180%);
             color: var(--bone-white);
             transform: scale(0.95);
@@ -483,9 +477,9 @@
             width: 100%;
             padding: 42px 32px;
             border-radius: 28px;
-            background: linear-gradient(135deg, rgba(245, 242, 235, 0.15) 0%, rgba(16, 21, 34, 0.8) 100%);
+            background: linear-gradient(135deg, rgba(245, 242, 235, 0.15) 0%, rgba(16, 21, 34, 0.82) 100%);
             border: 1px solid var(--glass-border);
-            box-shadow: 0 28px 68px rgba(0, 0, 0, 0.7), inset 0 2px 3px var(--glass-highlight);
+            box-shadow: 0 28px 68px rgba(0, 0, 0, 0.75), inset 0 2px 3px var(--glass-highlight);
             backdrop-filter: blur(20px) saturate(180%);
             -webkit-backdrop-filter: blur(20px) saturate(180%);
             text-align: center;
@@ -514,41 +508,41 @@
             .status-badge {
                 backdrop-filter: none;
                 -webkit-backdrop-filter: none;
-                background: rgba(16, 21, 34, 0.88);
+                background: rgba(16, 21, 34, 0.95);
             }
 
             .liquid-btn {
                 backdrop-filter: none;
                 -webkit-backdrop-filter: none;
-                background: rgba(16, 21, 34, 0.9);
+                background: rgba(16, 21, 34, 0.95);
                 padding: 11px 18px;
                 font-size: 0.82rem;
-                width: calc(50% - 8px);
-                min-width: 135px;
+                width: auto;
+                min-width: 120px;
             }
 
             .modal-backdrop {
                 backdrop-filter: none;
                 -webkit-backdrop-filter: none;
-                background: rgba(6, 9, 16, 0.92);
+                background: rgba(8, 12, 22, 0.95);
             }
 
             .liquid-modal {
                 backdrop-filter: none;
                 -webkit-backdrop-filter: none;
-                background: rgba(16, 21, 34, 0.96);
+                background: rgba(16, 21, 34, 0.95);
             }
 
             .not-found-card {
                 backdrop-filter: none;
                 -webkit-backdrop-filter: none;
-                background: rgba(16, 21, 34, 0.96);
+                background: rgba(16, 21, 34, 0.95);
             }
 
             #context-menu {
                 backdrop-filter: none;
                 -webkit-backdrop-filter: none;
-                background: rgba(14, 18, 30, 0.96);
+                background: rgba(16, 21, 34, 0.95);
             }
 
             .btn-interaction-zone {
@@ -565,69 +559,91 @@
 
 <body>
     <canvas id="weave-canvas"></canvas>
-
     <main id="main-stage"></main>
-
     <div id="context-menu" role="menu" aria-hidden="true"></div>
     <div id="toast-banner"></div>
-
     <div id="resume-modal" class="modal-backdrop">
         <div class="liquid-modal">
             <div class="modal-header">
                 <div class="modal-title" id="resume-modal-title"></div>
-                <button type="button" class="liquid-btn" id="close-resume-btn" style="padding: 6px 14px; border-radius: 12px;">Close</button>
+                <button type="button" class="liquid-btn" id="close-resume-btn" style="padding: 6px 16px; border-radius: 999px;">Close</button>
             </div>
             <div class="modal-body" id="resume-modal-body"></div>
         </div>
     </div>
-
     <div id="cursor-root">
         <div id="cursor-droplet"></div>
         <div id="cursor-dot"></div>
     </div>
-
     <script>
         const CONFIG = {
             text: {
                 status: "Online",
                 heroPrefix: "I write code ",
                 cursorChar: "_",
-                notFoundCode: "404",
-                notFoundTitle: "Signal Lost in the Weave",
-                notFoundMessage: "The coordinate path you requested lies outside the primary node topology.",
-                notFoundAction: "Return to Origin",
                 shareSuccess: "Portfolio coordinate link copied to clipboard",
+                contactCopied: "Direct contact address copied to clipboard: itscoda9x@gmail.com",
                 resumeTitle: "Systems & Creative Architecture Dossier",
                 resumeSummary: "Principal Creative Technologist & Security-Focused Frontend Architect specializing in zero-overhead 60FPS procedural systems, deterministic mathematical braids, and runtime telemetry hardening.",
                 resumeHighlights: [
-                    { title: "Rendering Engine", detail: "Hardware Blend-Mode Lighter Canvas 2D Pipeline Locked at 60 FPS" },
-                    { title: "Kinematics", detail: "Hypot-Radius Guaranteed Off-Screen Trajectories with Harmonic S-Curve" },
-                    { title: "Core Stack", detail: "Pure Vanilla ES2026, Zero CPU Blurs, Zero External Libs" },
-                    { title: "Architecture", detail: "Lifecycle-Managed Thread Rejuvenation and Modal Render Suspension" }
+                    { title: "Rendering Engine", detail: "Hardware Additive Blend-Mode Lighter Canvas 2D Pipeline Locked at 60 FPS" },
+                    { title: "Accretion Kinematics", detail: "Continuous Hermite Spline Convergence & Harmonic S-Curve Braiding" },
+                    { title: "Core Stack", detail: "Pure Vanilla ES2026, Zero CPU Blurs, Native Mobile Fallbacks" },
+                    { title: "Architecture", detail: "Lifecycle-Managed Thread Rejuvenation and Self-Healing Frame Policing" }
                 ]
             },
             colors: {
                 backgroundDeep: "#080c16",
                 backgroundCharcoal: "#101522",
+                backgroundNavy: "#0b1120",
                 boneWhite: "#f5f2eb",
                 emeraldStatus: "#10b981",
+                coreWhite: "#ffffff",
                 strings: [
-                    { base: "#00f5ff", glow: "rgba(0, 245, 255, 0.42)" },
-                    { base: "#ff007f", glow: "rgba(255, 0, 127, 0.42)" },
-                    { base: "#39ff14", glow: "rgba(57, 255, 20, 0.42)" },
-                    { base: "#ff9e00", glow: "rgba(255, 158, 0, 0.42)" },
-                    { base: "#b026ff", glow: "rgba(176, 38, 255, 0.42)" },
-                    { base: "#00ffcc", glow: "rgba(0, 255, 204, 0.42)" },
-                    { base: "#ff1493", glow: "rgba(255, 20, 147, 0.42)" },
-                    { base: "#ffea00", glow: "rgba(255, 234, 0, 0.42)" }
+                    { base: "#00f5ff", glow: "rgba(0, 245, 255, 0.45)" },
+                    { base: "#ffe600", glow: "rgba(255, 230, 0, 0.48)" },
+                    { base: "#ff1e50", glow: "rgba(255, 30, 80, 0.48)" },
+                    { base: "#00ffcc", glow: "rgba(0, 255, 204, 0.45)" },
+                    { base: "#2979ff", glow: "rgba(41, 121, 255, 0.48)" },
+                    { base: "#ff9e00", glow: "rgba(255, 158, 0, 0.45)" },
+                    { base: "#b026ff", glow: "rgba(176, 38, 255, 0.45)" },
+                    { base: "#ffea00", glow: "rgba(255, 234, 0, 0.48)" },
+                    { base: "#39ff14", glow: "rgba(57, 255, 20, 0.45)" },
+                    { base: "#ff1493", glow: "rgba(255, 20, 147, 0.45)" },
+                    { base: "#00bfff", glow: "rgba(0, 191, 255, 0.45)" }
                 ],
-                sparks: ["#ffffff", "#00f5ff", "#ff007f", "#39ff14", "#ff9e00"]
+                sparks: ["#ffffff", "#00f5ff", "#ffe600", "#ff1e50", "#39ff14", "#2979ff", "#b026ff"]
             },
             links: [
                 {
                     id: "github",
                     label: "GitHub",
                     url: "https://github.com",
+                    shortcut: "GH",
+                    icon: '<svg viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>'
+                },
+                {
+                    id: "contact",
+                    label: "Contact",
+                    url: "mailto:itscoda9x@gmail.com",
+                    shortcut: "EM",
+                    isContact: true,
+                    icon: '<svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>'
+                },
+                {
+                    id: "resume",
+                    label: "Resume",
+                    url: "#resume",
+                    shortcut: "CV",
+                    isModal: true,
+                    icon: '<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>'
+                }
+            ],
+            socialMenu: [
+                {
+                    id: "github",
+                    label: "GitHub Profile",
+                    url: "https://github.com/Coda9X",
                     shortcut: "GH",
                     icon: '<svg viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>'
                 },
@@ -647,7 +663,7 @@
                 },
                 {
                     id: "resume",
-                    label: "Resume",
+                    label: "View Resume Dossier",
                     url: "#resume",
                     shortcut: "CV",
                     isModal: true,
@@ -655,29 +671,36 @@
                 }
             ],
             weave: {
-                stringCount: 10,
-                segmentCountHigh: 64,
-                boundaryMargin: 300,
-                destExtraMargin: 300,
-                lineWidthFree: 1.5,
-                lineWidthBraid: 0.75,
-                lineWidthGlowFree: 4.8,
-                lineWidthGlowBraid: 2.8,
-                waveBaseSpeed: 0.00012,
-                braidRadius: 18,
-                braidFrequency: 0.0008,
-                convergenceDriftSpeed: 0.000045,
-                destinationAngleSpeed: 0.000028,
-                harmonicArchAmplitude: 140,
-                harmonicArchSpeed: 0.000008,
-                harmonicArchHarmonics: 2.4,
-                lifespanMinFrames: 8500,
-                lifespanMaxFrames: 14500,
-                fadeFrames: 800,
-                sparkSpawnProbability: 0.08,
-                maxSparks: 35,
-                sparkLifeMin: 30,
-                sparkLifeMax: 65
+                stringCountHigh: 18,
+                stringCountLow: 18,
+                segmentCountHigh: 24,
+                segmentCountLow: 24,
+                destExtraMargin: 700,
+                glowWidth: 4.0,
+                coreWidth: 1.2,
+                glowAlpha: 0.48,
+                coreAlpha: 0.5,
+                clockFactor: 0.01,
+                waveSpeed: 0.04,
+                braidSpeed: 0.02,
+                riverSpeed: 0.02,
+                destSpeed: 0.0002,
+                centerSpeed: 0.0005,
+                destAngleBase: 2.45,
+                destAngleWander: 0.12,
+                harmonicArchAmplitude: 200,
+                braidRadiusOuter: 90,
+                braidRadiusInner: 50,
+                braidFreqOuter: 40,
+                braidFreqInner: 40,
+                lifespanMinFrames: 1000,
+                lifespanMaxFrames: 1000,
+                fadeFrames: 120,
+                sparkSpawnProbability: 100,
+                maxSparksHigh: 36,
+                maxSparksLow: 14,
+                sparkLifeMin: 38,
+                sparkLifeMax: 76
             },
             cursor: {
                 dropletLerp: 0.18,
@@ -687,15 +710,12 @@
                 magneticDistance: 110,
                 magneticForce: 0.24
             },
-            security: {
-                enableResizeAnomalyTrap: true,
-                devtoolsThresholdPx: 210,
-                maxFrameFreezeMs: 4500,
-                crashPayload: "<div style='display:flex;height:100vh;width:100vw;align-items:center;justify-content:center;background:#080c16;color:#ff007f;font-family:monospace;font-size:1.1rem;letter-spacing:0.08em;'>SESSION TERMINATED - SECURITY VIOLATION DETECTED</div>",
-                allowedRootPaths: ["/", "/index.html", "/srcdoc", "blank", ""]
+            performance: {
+                fpsThreshold: 50,
+                lowFpsDurationThresholdMs: 1500,
+                checkIntervalMs: 250
             }
         };
-
         (function bootstrapPortfolio() {
             const canvas = document.getElementById("weave-canvas");
             const ctx = canvas.getContext("2d", { alpha: true });
@@ -707,103 +727,95 @@
             const cursorRoot = document.getElementById("cursor-root");
             const cursorDot = document.getElementById("cursor-dot");
             const cursorDroplet = document.getElementById("cursor-droplet");
-
             const isTouchDevice = window.matchMedia("(pointer: coarse)").matches || ("ontouchstart" in window);
             if (isTouchDevice && cursorRoot) {
                 cursorRoot.style.display = "none";
             }
-
             let width = window.innerWidth;
             let height = window.innerHeight;
-            let dpr = Math.min(window.devicePixelRatio || 1, 2);
+            let dpr = isTouchDevice ? 1 : Math.min(window.devicePixelRatio || 1, 1.5);
             let time = 0;
             let is404Mode = false;
-            let systemTerminated = false;
             let isAnimationPaused = false;
             let animFrameId = null;
-
+            let isLowQualityMode = false;
+            let currentSegmentCount = CONFIG.weave.segmentCountHigh;
+            let maxSparksCount = CONFIG.weave.maxSparksHigh;
+            let lowFpsTimeAccumulator = 0;
+            let frameCount = 0;
+            let lastFpsCheckTime = performance.now();
             const pointer = {
                 x: width * 0.5,
                 y: height * 0.5,
+                smoothX: width * 0.5,
+                smoothY: height * 0.5,
                 dropX: width * 0.5,
                 dropY: height * 0.5,
-                vx: 0,
-                vy: 0,
                 angle: 0,
-                spin: 0,
-                hasMoved: false
+                dropScale: 1.0,
+                hasMoved: false,
+                isDown: false
             };
-
             const convergencePoint = {
-                x: width * 0.44,
+                x: width * 0.50,
                 y: height * 0.48,
                 seedX: Math.random() * 1000,
                 seedY: Math.random() * 1000
             };
-
             const destinationPoint = {
-                x: width * 1.5,
-                y: height * 1.5,
-                angle: Math.random() * Math.PI * 2
+                x: -450,
+                y: height + 450,
+                t: Math.random() * 500
             };
-
+            const spineGuides = {
+                b0: { x: width * 0.82, y: -240 },
+                b1: { x: width * 0.68, y: height * 0.20 },
+                b2: { x: width * 0.30, y: height * 0.74 },
+                b3: { x: -450, y: height + 450 }
+            };
+            const segLookup = [];
+            const frameSpine = [];
+            function initSegLookup(count) {
+                segLookup.length = 0;
+                frameSpine.length = 0;
+                for (let i = 0; i < count; i++) {
+                    const s = i / (count - 1);
+                    const u = 1 - s;
+                    const u2 = u * u;
+                    const u3 = u2 * u;
+                    const s2 = s * s;
+                    const s3 = s2 * s;
+                    const rawFree = Math.max(0, Math.min(1, 1 - (s / 0.44)));
+                    const wFree = rawFree * rawFree * (3 - 2 * rawFree);
+                    const rawBraid = Math.max(0, Math.min(1, (s - 0.30) / 0.18));
+                    const wBraid = rawBraid * rawBraid * (3 - 2 * rawBraid);
+                    const archFactor = Math.sin(s * Math.PI);
+                    segLookup.push({
+                        s: s,
+                        u: u,
+                        u3: u3,
+                        c1: 3 * u2 * s,
+                        c2: 3 * u * s2,
+                        s3: s3,
+                        du0: 3 * u2,
+                        du1: 6 * u * s,
+                        du2: 3 * s2,
+                        wFree: wFree,
+                        wBraid: wBraid,
+                        archFactor: archFactor
+                    });
+                    frameSpine.push({
+                        sx: 0,
+                        sy: 0,
+                        nx: 0,
+                        ny: 0,
+                        riverSCurve: 0
+                    });
+                }
+            }
             const strings = [];
             const sparks = [];
             let interactiveButtons = [];
-
-            const spineCache = { x: 0, y: 0, nx: 0, ny: 0, tx: 0, ty: 0 };
-
-            function triggerSecurityCrash() {
-                if (systemTerminated) return;
-                systemTerminated = true;
-                if (animFrameId) cancelAnimationFrame(animFrameId);
-                document.body.innerHTML = CONFIG.security.crashPayload;
-            }
-
-            function initSecurityGuards() {
-                window.addEventListener("dragstart", function (e) {
-                    e.preventDefault();
-                    return false;
-                }, { passive: false });
-
-                window.addEventListener("selectstart", function (e) {
-                    e.preventDefault();
-                    return false;
-                }, { passive: false });
-
-                window.addEventListener("keydown", function (e) {
-                    const key = e.key ? e.key.toUpperCase() : "";
-                    if (
-                        e.keyCode === 123 ||
-                        (e.ctrlKey && e.shiftKey && (key === "I" || key === "J" || key === "C")) ||
-                        (e.metaKey && e.altKey && (key === "I" || key === "J" || key === "C")) ||
-                        (e.ctrlKey && key === "U")
-                    ) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        triggerSecurityCrash();
-                        return false;
-                    }
-                }, true);
-
-                let baselineDiffW = Math.abs(window.outerWidth - window.innerWidth);
-                let baselineDiffH = Math.abs(window.outerHeight - window.innerHeight);
-
-                window.addEventListener("resize", function () {
-                    if (!CONFIG.security.enableResizeAnomalyTrap) return;
-                    if (window.outerWidth > 0 && window.outerHeight > 0) {
-                        const currentDiffW = Math.abs(window.outerWidth - window.innerWidth);
-                        const currentDiffH = Math.abs(window.outerHeight - window.innerHeight);
-                        if (
-                            currentDiffW - baselineDiffW > CONFIG.security.devtoolsThresholdPx ||
-                            currentDiffH - baselineDiffH > CONFIG.security.devtoolsThresholdPx
-                        ) {
-                            triggerSecurityCrash();
-                        }
-                    }
-                });
-            }
-
             function showToast(msg) {
                 toastBanner.textContent = msg;
                 toastBanner.classList.add("show");
@@ -812,7 +824,6 @@
                     toastBanner.classList.remove("show");
                 }, 2600);
             }
-
             function pauseRendering() {
                 isAnimationPaused = true;
                 if (animFrameId) {
@@ -820,14 +831,12 @@
                     animFrameId = null;
                 }
             }
-
             function resumeRendering() {
-                if (!isAnimationPaused || systemTerminated) return;
+                if (!isAnimationPaused) return;
                 isAnimationPaused = false;
                 lastFrameTime = performance.now();
                 animFrameId = requestAnimationFrame(animate);
             }
-
             function openResumeModal() {
                 const titleEl = document.getElementById("resume-modal-title");
                 const bodyEl = document.getElementById("resume-modal-body");
@@ -844,12 +853,10 @@
                 resumeModal.classList.add("open");
                 pauseRendering();
             }
-
             function closeResumeModal() {
                 resumeModal.classList.remove("open");
                 resumeRendering();
             }
-
             if (closeResumeBtn) {
                 closeResumeBtn.addEventListener("click", closeResumeModal);
             }
@@ -858,21 +865,18 @@
                     if (e.target === resumeModal) closeResumeModal();
                 });
             }
-
-            function copyShareUrl() {
-                const shareUrl = window.location.href;
+            function copyTextToClipboard(text, message) {
                 if (navigator.clipboard && navigator.clipboard.writeText) {
-                    navigator.clipboard.writeText(shareUrl).then(function () {
-                        showToast(CONFIG.text.shareSuccess);
+                    navigator.clipboard.writeText(text).then(function () {
+                        showToast(message);
                     }).catch(function () {
-                        fallbackCopy(shareUrl);
+                        fallbackCopy(text, message);
                     });
                 } else {
-                    fallbackCopy(shareUrl);
+                    fallbackCopy(text, message);
                 }
             }
-
-            function fallbackCopy(text) {
+            function fallbackCopy(text, message) {
                 const ta = document.createElement("textarea");
                 ta.value = text;
                 ta.style.position = "fixed";
@@ -881,25 +885,12 @@
                 ta.select();
                 try {
                     document.execCommand("copy");
-                    showToast(CONFIG.text.shareSuccess);
+                    showToast(message);
                 } catch (err) {
-                    showToast(CONFIG.text.shareSuccess);
+                    showToast(message);
                 }
                 document.body.removeChild(ta);
             }
-
-            function checkRouteIsValid() {
-                const rawPath = window.location.pathname || "/";
-                if (window.location.hash === "#404") return false;
-                for (let i = 0; i < CONFIG.security.allowedRootPaths.length; i++) {
-                    const allowed = CONFIG.security.allowedRootPaths[i];
-                    if (rawPath === allowed || rawPath.endsWith("/index.html") || rawPath.includes("ttl=63d")) {
-                        return true;
-                    }
-                }
-                return rawPath === "/";
-            }
-
             function render404Template() {
                 is404Mode = true;
                 mainStage.innerHTML = "";
@@ -915,7 +906,6 @@
                     '<span>' + CONFIG.text.notFoundAction + '</span>' +
                     '</button>';
                 mainStage.appendChild(card);
-
                 const returnBtn = document.getElementById("return-origin-btn");
                 if (returnBtn) {
                     returnBtn.addEventListener("click", function () {
@@ -931,32 +921,32 @@
                 }
                 refreshInteractiveButtons();
             }
-
             function renderPortfolioUI() {
                 is404Mode = false;
                 mainStage.innerHTML = "";
                 const centerCard = document.createElement("div");
                 centerCard.className = "center-card";
-
                 const badge = document.createElement("div");
                 badge.className = "status-badge";
                 badge.innerHTML = '<span class="status-dot"></span><span>' + CONFIG.text.status + '</span>';
-
                 const title = document.createElement("h1");
                 title.className = "hero-title";
                 title.innerHTML = '<span>' + CONFIG.text.heroPrefix + '</span><span class="blinking-cursor">' + CONFIG.text.cursorChar + '</span>';
-
                 const btnZone = document.createElement("div");
                 btnZone.className = "btn-interaction-zone";
-
                 for (let i = 0; i < CONFIG.links.length; i++) {
                     const item = CONFIG.links[i];
-                    const btn = document.createElement(item.isModal ? "button" : "a");
+                    const btn = document.createElement(item.isModal || item.isContact ? "button" : "a");
                     btn.className = "liquid-btn";
                     if (item.isModal) {
                         btn.type = "button";
                         btn.addEventListener("click", function () {
                             openResumeModal();
+                        });
+                    } else if (item.isContact) {
+                        btn.type = "button";
+                        btn.addEventListener("click", function () {
+                            copyTextToClipboard("itscoda9x@gmail.com", CONFIG.text.contactCopied);
                         });
                     } else {
                         btn.href = item.url;
@@ -966,18 +956,16 @@
                     btn.innerHTML = item.icon + '<span>' + item.label + '</span>';
                     btnZone.appendChild(btn);
                 }
-
                 centerCard.appendChild(badge);
                 centerCard.appendChild(title);
                 centerCard.appendChild(btnZone);
                 mainStage.appendChild(centerCard);
                 refreshInteractiveButtons();
             }
-
             function buildContextMenu() {
                 let html = "";
-                for (let i = 0; i < CONFIG.links.length; i++) {
-                    const item = CONFIG.links[i];
+                for (let i = 0; i < CONFIG.socialMenu.length; i++) {
+                    const item = CONFIG.socialMenu[i];
                     html +=
                         '<button type="button" class="ctx-item" data-ctx-id="' + item.id + '">' +
                         '<span class="ctx-item-left">' + item.icon + '<span>' + item.label + '</span></span>' +
@@ -993,17 +981,7 @@
                     '</span>' +
                     '<span class="ctx-shortcut">URL</span>' +
                     '</button>';
-                html +=
-                    '<button type="button" class="ctx-item" data-ctx-action="toggle404">' +
-                    '<span class="ctx-item-left">' +
-                    '<svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>' +
-                    '<span>Test 404 Route View</span>' +
-                    '</span>' +
-                    '<span class="ctx-shortcut">404</span>' +
-                    '</button>';
-
                 contextMenu.innerHTML = html;
-
                 const items = contextMenu.querySelectorAll(".ctx-item");
                 for (let i = 0; i < items.length; i++) {
                     items[i].addEventListener("click", function (e) {
@@ -1011,25 +989,16 @@
                         const id = this.getAttribute("data-ctx-id");
                         const action = this.getAttribute("data-ctx-action");
                         hideContextMenu();
-
                         if (action === "share") {
-                            copyShareUrl();
+                            copyTextToClipboard(window.location.href, CONFIG.text.shareSuccess);
                             return;
                         }
-                        if (action === "toggle404") {
-                            if (is404Mode) {
-                                renderPortfolioUI();
-                            } else {
-                                render404Template();
-                            }
-                            return;
-                        }
-                        for (let j = 0; j < CONFIG.links.length; j++) {
-                            if (CONFIG.links[j].id === id) {
-                                if (CONFIG.links[j].isModal) {
+                        for (let j = 0; j < CONFIG.socialMenu.length; j++) {
+                            if (CONFIG.socialMenu[j].id === id) {
+                                if (CONFIG.socialMenu[j].isModal) {
                                     openResumeModal();
                                 } else {
-                                    window.open(CONFIG.links[j].url, "_blank", "noopener,noreferrer");
+                                    window.open(CONFIG.socialMenu[j].url, "_blank", "noopener,noreferrer");
                                 }
                                 break;
                             }
@@ -1037,7 +1006,6 @@
                     });
                 }
             }
-
             function showContextMenu(x, y) {
                 const menuW = 240;
                 const menuH = 260;
@@ -1048,65 +1016,61 @@
                 contextMenu.classList.add("visible");
                 contextMenu.setAttribute("aria-hidden", "false");
             }
-
             function hideContextMenu() {
                 contextMenu.classList.remove("visible");
                 contextMenu.setAttribute("aria-hidden", "true");
             }
-
             function refreshInteractiveButtons() {
                 interactiveButtons = Array.prototype.slice.call(document.querySelectorAll(".liquid-btn"));
             }
-
             function resizeCanvas() {
                 width = window.innerWidth;
                 height = window.innerHeight;
-                dpr = Math.min(window.devicePixelRatio || 1, 2);
+                dpr = isTouchDevice ? 1 : Math.min(window.devicePixelRatio || 1, 1.5);
                 canvas.width = Math.floor(width * dpr);
                 canvas.height = Math.floor(height * dpr);
                 ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
             }
-
-            function createStrandObject(colorIndex) {
-                const m = CONFIG.weave.boundaryMargin;
-                const edge = Math.floor(Math.random() * 4);
-                let ox, oy;
-                if (edge === 0) {
-                    ox = -m - Math.random() * 140;
-                    oy = -m + Math.random() * (height + m * 2);
-                } else if (edge === 1) {
-                    ox = width + m + Math.random() * 140;
-                    oy = -m + Math.random() * (height + m * 2);
-                } else if (edge === 2) {
-                    ox = -m + Math.random() * (width + m * 2);
-                    oy = -m - Math.random() * 140;
+            function computeSpawnOrigin(index, total) {
+                const frac = index / Math.max(total - 1, 1);
+                let ox = 0;
+                let oy = 0;
+                if (frac < 0.45) {
+                    const topFrac = frac / 0.45;
+                    ox = width * (0.05 + topFrac * 0.85);
+                    oy = -220 - (index % 3) * 45;
                 } else {
-                    ox = -m + Math.random() * (width + m * 2);
-                    oy = height + m + Math.random() * 140;
+                    const sideFrac = (frac - 0.45) / 0.55;
+                    ox = width + 180 + (index % 3) * 55;
+                    oy = height * (-0.15 + sideFrac * 0.95);
                 }
-
+                return { x: ox, y: oy };
+            }
+            function createStrandObject(colorIndex, total) {
+                const orig = computeSpawnOrigin(colorIndex, total);
                 const maxPts = CONFIG.weave.segmentCountHigh;
                 const points = new Array(maxPts);
                 for (let p = 0; p < maxPts; p++) {
-                    points[p] = { x: ox, y: oy };
+                    points[p] = { x: orig.x, y: orig.y };
                 }
-
                 const maxLifespan = CONFIG.weave.lifespanMinFrames + Math.random() * (CONFIG.weave.lifespanMaxFrames - CONFIG.weave.lifespanMinFrames);
                 const colorScheme = CONFIG.colors.strings[colorIndex % CONFIG.colors.strings.length];
-
+                const isOuterLoop = (colorIndex === 1 || colorIndex === 2 || colorIndex === 5 || colorIndex === 7);
+                const braidRadius = isOuterLoop ? CONFIG.weave.braidRadiusOuter : CONFIG.weave.braidRadiusInner;
+                const braidFreq = isOuterLoop ? CONFIG.weave.braidFreqOuter : CONFIG.weave.braidFreqInner;
                 return {
                     color: colorScheme.base,
                     glowColor: colorScheme.glow,
-                    originX: ox,
-                    originY: oy,
-                    originDriftSeedX: Math.random() * 1000,
-                    originDriftSeedY: Math.random() * 1000,
-                    freq1: 1.6 + Math.random() * 2.2,
-                    freq2: 3.2 + Math.random() * 2.5,
-                    amp1: 24 + Math.random() * 38,
-                    amp2: 10 + Math.random() * 20,
-                    phase: Math.random() * Math.PI * 2,
-                    speed: CONFIG.weave.waveBaseSpeed * (0.8 + Math.random() * 0.4),
+                    originX: orig.x,
+                    originY: orig.y,
+                    origDx: 0,
+                    origDy: 0,
+                    freq1: 1.5 + (colorIndex % 3) * 0.5,
+                    amp1: 34 + (colorIndex % 4) * 8,
+                    braidRadius: braidRadius,
+                    braidFreq: braidFreq,
+                    isOuterLoop: isOuterLoop,
+                    phase: (colorIndex / total) * Math.PI * 2.0,
                     lifespan: maxLifespan,
                     age: 0,
                     fadeFrames: CONFIG.weave.fadeFrames,
@@ -1114,66 +1078,43 @@
                     points: points
                 };
             }
-
-            function resetStrand(str, colorIndex) {
-                const m = CONFIG.weave.boundaryMargin;
-                const edge = Math.floor(Math.random() * 4);
-                let ox, oy;
-                if (edge === 0) {
-                    ox = -m - Math.random() * 140;
-                    oy = -m + Math.random() * (height + m * 2);
-                } else if (edge === 1) {
-                    ox = width + m + Math.random() * 140;
-                    oy = -m + Math.random() * (height + m * 2);
-                } else if (edge === 2) {
-                    ox = -m + Math.random() * (width + m * 2);
-                    oy = -m - Math.random() * 140;
-                } else {
-                    ox = -m + Math.random() * (width + m * 2);
-                    oy = height + m + Math.random() * 140;
-                }
-
+            function resetStrand(str, colorIndex, total) {
+                const orig = computeSpawnOrigin(colorIndex, total);
                 const colorScheme = CONFIG.colors.strings[colorIndex % CONFIG.colors.strings.length];
+                const isOuterLoop = (colorIndex === 1 || colorIndex === 2 || colorIndex === 5 || colorIndex === 7);
                 str.color = colorScheme.base;
                 str.glowColor = colorScheme.glow;
-                str.originX = ox;
-                str.originY = oy;
-                str.originDriftSeedX = Math.random() * 1000;
-                str.originDriftSeedY = Math.random() * 1000;
-                str.freq1 = 1.6 + Math.random() * 2.2;
-                str.freq2 = 3.2 + Math.random() * 2.5;
-                str.amp1 = 24 + Math.random() * 38;
-                str.amp2 = 10 + Math.random() * 20;
-                str.phase = Math.random() * Math.PI * 2;
-                str.speed = CONFIG.weave.waveBaseSpeed * (0.8 + Math.random() * 0.4);
+                str.originX = orig.x;
+                str.originY = orig.y;
+                str.braidRadius = isOuterLoop ? CONFIG.weave.braidRadiusOuter : CONFIG.weave.braidRadiusInner;
+                str.braidFreq = isOuterLoop ? CONFIG.weave.braidFreqOuter : CONFIG.weave.braidFreqInner;
+                str.isOuterLoop = isOuterLoop;
+                str.phase = (colorIndex / total) * Math.PI * 2.0;
                 str.lifespan = CONFIG.weave.lifespanMinFrames + Math.random() * (CONFIG.weave.lifespanMaxFrames - CONFIG.weave.lifespanMinFrames);
                 str.age = 0;
                 str.alpha = 0;
-
                 for (let p = 0; p < str.points.length; p++) {
-                    str.points[p].x = ox;
-                    str.points[p].y = oy;
+                    str.points[p].x = orig.x;
+                    str.points[p].y = orig.y;
                 }
             }
-
             function initStrands() {
                 strings.length = 0;
-                const count = CONFIG.weave.stringCount;
+                const count = CONFIG.weave.stringCountHigh;
                 for (let i = 0; i < count; i++) {
-                    const strand = createStrandObject(i);
-                    strand.age = (i / count) * strand.lifespan * 0.75;
+                    const strand = createStrandObject(i, count);
+                    strand.age = (i / count) * strand.lifespan * 0.8;
                     strings.push(strand);
                 }
             }
-
             function spawnSpark(x, y, tangentX, tangentY) {
-                if (sparks.length >= CONFIG.weave.maxSparks) return;
+                if (sparks.length >= maxSparksCount) return;
                 const angle = Math.atan2(tangentY, tangentX) + (Math.random() - 0.5) * 1.8;
-                const speed = 0.2 + Math.random() * 0.6;
+                const speed = 0.12 + Math.random() * 0.45;
                 const maxLife = CONFIG.weave.sparkLifeMin + Math.random() * (CONFIG.weave.sparkLifeMax - CONFIG.weave.sparkLifeMin);
                 sparks.push({
-                    x: x + (Math.random() - 0.5) * 8,
-                    y: y + (Math.random() - 0.5) * 8,
+                    x: x + (Math.random() - 0.5) * 16,
+                    y: y + (Math.random() - 0.5) * 16,
                     vx: Math.cos(angle) * speed,
                     vy: Math.sin(angle) * speed,
                     life: maxLife,
@@ -1182,56 +1123,70 @@
                     color: CONFIG.colors.sparks[Math.floor(Math.random() * CONFIG.colors.sparks.length)]
                 });
             }
-
             function updateFieldCoordinates(dt) {
-                const cSpeed = CONFIG.weave.convergenceDriftSpeed * dt;
-                convergencePoint.seedX += cSpeed;
-                convergencePoint.seedY += cSpeed * 1.15;
-
-                convergencePoint.x = width * (0.46 + 0.22 * Math.sin(convergencePoint.seedX) * Math.cos(convergencePoint.seedY * 0.65));
-                convergencePoint.y = height * (0.48 + 0.22 * Math.cos(convergencePoint.seedY) * Math.sin(convergencePoint.seedX * 0.75));
-
-                destinationPoint.angle += CONFIG.weave.destinationAngleSpeed * dt;
-                const radius = Math.hypot(width, height) * 0.75 + CONFIG.weave.destExtraMargin;
-                destinationPoint.x = width * 0.5 + Math.cos(destinationPoint.angle) * radius;
-                destinationPoint.y = height * 0.5 + Math.sin(destinationPoint.angle) * radius;
+                convergencePoint.seedX += CONFIG.weave.centerSpeed * dt;
+                convergencePoint.seedY += CONFIG.weave.centerSpeed * 1.15 * dt;
+                convergencePoint.x = width * (0.50 + 0.06 * Math.sin(convergencePoint.seedX));
+                convergencePoint.y = height * (0.48 + 0.05 * Math.cos(convergencePoint.seedY));
+                destinationPoint.t += CONFIG.weave.destSpeed * dt;
+                const rDest = Math.hypot(width, height) + CONFIG.weave.destExtraMargin;
+                const destAngle = CONFIG.weave.destAngleBase + Math.sin(destinationPoint.t) * CONFIG.weave.destAngleWander;
+                destinationPoint.x = width * 0.5 + Math.cos(destAngle) * rDest;
+                destinationPoint.y = height * 0.5 + Math.sin(destAngle) * rDest;
+                const midDeltaX = (convergencePoint.x - width * 0.50);
+                const midDeltaY = (convergencePoint.y - height * 0.48);
+                spineGuides.b0.x = width * 0.82;
+                spineGuides.b0.y = -240;
+                spineGuides.b1.x = width * 0.68 + midDeltaX * 0.5;
+                spineGuides.b1.y = height * 0.20 + midDeltaY * 0.5;
+                spineGuides.b2.x = width * 0.30 + midDeltaX * 0.5;
+                spineGuides.b2.y = height * 0.74 + midDeltaY * 0.5;
+                spineGuides.b3.x = destinationPoint.x;
+                spineGuides.b3.y = destinationPoint.y;
             }
-
-            function computeBraidSpine(u) {
-                const dx = destinationPoint.x - convergencePoint.x;
-                const dy = destinationPoint.y - convergencePoint.y;
-                const len = Math.hypot(dx, dy) || 1;
-                const nx = -dy / len;
-                const ny = dx / len;
-                const harmonicWave =
-                    Math.sin(u * Math.PI) *
-                    Math.sin(time * CONFIG.weave.harmonicArchSpeed + u * CONFIG.weave.harmonicArchHarmonics) *
-                    CONFIG.weave.harmonicArchAmplitude;
-
-                spineCache.x = convergencePoint.x + dx * u + nx * harmonicWave;
-                spineCache.y = convergencePoint.y + dy * u + ny * harmonicWave;
-                spineCache.nx = nx;
-                spineCache.ny = ny;
-                spineCache.tx = dx / len;
-                spineCache.ty = dy / len;
-                return spineCache;
+            function precomputeFrameSpine() {
+                const segs = currentSegmentCount;
+                const b0 = spineGuides.b0;
+                const b1 = spineGuides.b1;
+                const b2 = spineGuides.b2;
+                const b3 = spineGuides.b3;
+                for (let i = 0; i < segs; i++) {
+                    const lk = segLookup[i];
+                    const sx = lk.u3 * b0.x + lk.c1 * b1.x + lk.c2 * b2.x + lk.s3 * b3.x;
+                    const sy = lk.u3 * b0.y + lk.c1 * b1.y + lk.c2 * b2.y + lk.s3 * b3.y;
+                    const tx = lk.du0 * (b1.x - b0.x) + lk.du1 * (b2.x - b1.x) + lk.du2 * (b3.x - b2.x);
+                    const ty = lk.du0 * (b1.y - b0.y) + lk.du1 * (b2.y - b1.y) + lk.du2 * (b3.y - b2.y);
+                    const tlen = Math.hypot(tx, ty) || 1;
+                    const nx = -ty / tlen;
+                    const ny = tx / tlen;
+                    const riverSCurve = Math.sin(lk.s * Math.PI * 2.2 - time * CONFIG.weave.riverSpeed) *
+                        CONFIG.weave.harmonicArchAmplitude * lk.wBraid * lk.archFactor;
+                    const sp = frameSpine[i];
+                    sp.sx = sx;
+                    sp.sy = sy;
+                    sp.nx = nx;
+                    sp.ny = ny;
+                    sp.riverSCurve = riverSCurve;
+                }
             }
-
             function updateAndRenderStrings(dt) {
-                const segs = CONFIG.weave.segmentCountHigh;
-                const splitIndex = Math.floor(segs * 0.45);
-
+                const segs = currentSegmentCount;
+                const activeCount = isLowQualityMode ? Math.min(strings.length, CONFIG.weave.stringCountLow) : strings.length;
+                const b0 = spineGuides.b0;
+                precomputeFrameSpine();
+                const timeWave = time * CONFIG.weave.waveSpeed;
+                const timeBraid = time * CONFIG.weave.braidSpeed;
+                ctx.save();
                 ctx.lineCap = "round";
                 ctx.lineJoin = "round";
-
-                for (let s = 0; s < strings.length; s++) {
+                ctx.globalCompositeOperation = "lighter";
+                const corePath = new Path2D();
+                for (let s = 0; s < activeCount; s++) {
                     const str = strings[s];
                     str.age += dt * 0.06;
-
                     if (str.age >= str.lifespan) {
-                        resetStrand(str, s);
+                        resetStrand(str, s, activeCount);
                     }
-
                     if (str.age < str.fadeFrames) {
                         str.alpha = str.age / str.fadeFrames;
                     } else if (str.age > str.lifespan - str.fadeFrames) {
@@ -1239,130 +1194,51 @@
                     } else {
                         str.alpha = 1;
                     }
-
                     if (str.alpha <= 0.005) continue;
-
-                    str.originDriftSeedX += 0.0000015 * dt;
-                    str.originDriftSeedY += 0.0000018 * dt;
-
-                    const ox = str.originX + Math.sin(str.originDriftSeedX) * 35;
-                    const oy = str.originY + Math.cos(str.originDriftSeedY) * 35;
-
-                    const toConvX = convergencePoint.x - ox;
-                    const toConvY = convergencePoint.y - oy;
-                    const toConvLen = Math.hypot(toConvX, toConvY) || 1;
-                    const pnx = -toConvY / toConvLen;
-                    const pny = toConvX / toConvLen;
-
+                    str.origDx = str.originX - b0.x;
+                    str.origDy = str.originY - b0.y;
                     for (let i = 0; i < segs; i++) {
-                        if (i <= splitIndex) {
-                            const t = i / splitIndex;
-                            const smoothT = t * t * (3 - 2 * t);
-                            const baseX = ox + toConvX * smoothT;
-                            const baseY = oy + toConvY * smoothT;
-                            const envelope = Math.sin(t * Math.PI);
-                            const wave =
-                                Math.sin(t * str.freq1 * Math.PI - time * str.speed + str.phase) * str.amp1 +
-                                Math.cos(t * str.freq2 * Math.PI + time * str.speed * 1.25 + str.phase) * str.amp2;
-
-                            str.points[i].x = baseX + pnx * wave * envelope;
-                            str.points[i].y = baseY + pny * wave * envelope;
-                        } else {
-                            const u = (i - splitIndex) / (segs - 1 - splitIndex);
-                            const spine = computeBraidSpine(u);
-                            const taper = Math.sin(Math.min(u * 3.1415, Math.PI * 0.88));
-                            const braidAngle = u * Math.PI * 2 * (CONFIG.weave.braidFrequency * 8) - time * 0.000055 + str.phase;
-                            const orbitOffset = Math.sin(braidAngle) * CONFIG.weave.braidRadius * (0.45 + 0.55 * taper);
-                            const axialFlutter = Math.cos(braidAngle) * 2.5;
-
-                            str.points[i].x = spine.x + spine.nx * orbitOffset + spine.tx * axialFlutter;
-                            str.points[i].y = spine.y + spine.ny * orbitOffset + spine.ty * axialFlutter;
+                        const lk = segLookup[i];
+                        const sp = frameSpine[i];
+                        const wave = Math.sin(lk.s * str.freq1 * Math.PI - timeWave + str.phase) * str.amp1 * lk.wFree;
+                        let orbit = Math.sin(lk.s * str.braidFreq * Math.PI * 2.0 - timeBraid + str.phase) * str.braidRadius;
+                        if (str.isOuterLoop) {
+                            orbit += Math.sin(2.0 * (lk.s * str.braidFreq * Math.PI * 2.0 - timeBraid + str.phase) + 1.1) * (str.braidRadius * 0.36);
                         }
+                        const totalNormal = wave + orbit * lk.wBraid + sp.riverSCurve;
+                        str.points[i].x = sp.sx + str.origDx * lk.wFree + sp.nx * totalNormal;
+                        str.points[i].y = sp.sy + str.origDy * lk.wFree + sp.ny * totalNormal;
                     }
-
-                    ctx.save();
-                    ctx.globalAlpha = str.alpha;
-                    ctx.globalCompositeOperation = "lighter";
-
-                    ctx.strokeStyle = str.glowColor;
-                    ctx.lineWidth = CONFIG.weave.lineWidthGlowFree;
                     ctx.beginPath();
                     ctx.moveTo(str.points[0].x, str.points[0].y);
-                    for (let i = 1; i <= splitIndex; i++) {
+                    corePath.moveTo(str.points[0].x, str.points[0].y);
+                    for (let i = 1; i < segs; i++) {
                         const xc = (str.points[i - 1].x + str.points[i].x) * 0.5;
                         const yc = (str.points[i - 1].y + str.points[i].y) * 0.5;
                         ctx.quadraticCurveTo(str.points[i - 1].x, str.points[i - 1].y, xc, yc);
-                    }
-                    ctx.lineTo(str.points[splitIndex].x, str.points[splitIndex].y);
-                    ctx.stroke();
-
-                    ctx.lineWidth = CONFIG.weave.lineWidthGlowBraid;
-                    ctx.beginPath();
-                    ctx.moveTo(str.points[splitIndex].x, str.points[splitIndex].y);
-                    for (let i = splitIndex + 1; i < segs; i++) {
-                        const xc = (str.points[i - 1].x + str.points[i].x) * 0.5;
-                        const yc = (str.points[i - 1].y + str.points[i].y) * 0.5;
-                        ctx.quadraticCurveTo(str.points[i - 1].x, str.points[i - 1].y, xc, yc);
+                        corePath.quadraticCurveTo(str.points[i - 1].x, str.points[i - 1].y, xc, yc);
                     }
                     ctx.lineTo(str.points[segs - 1].x, str.points[segs - 1].y);
-                    ctx.stroke();
-
+                    corePath.lineTo(str.points[segs - 1].x, str.points[segs - 1].y);
+                    ctx.globalAlpha = str.alpha * CONFIG.weave.glowAlpha;
                     ctx.strokeStyle = str.color;
-                    ctx.lineWidth = CONFIG.weave.lineWidthFree * 1.6;
-                    ctx.beginPath();
-                    ctx.moveTo(str.points[0].x, str.points[0].y);
-                    for (let i = 1; i <= splitIndex; i++) {
-                        const xc = (str.points[i - 1].x + str.points[i].x) * 0.5;
-                        const yc = (str.points[i - 1].y + str.points[i].y) * 0.5;
-                        ctx.quadraticCurveTo(str.points[i - 1].x, str.points[i - 1].y, xc, yc);
-                    }
-                    ctx.lineTo(str.points[splitIndex].x, str.points[splitIndex].y);
+                    ctx.lineWidth = CONFIG.weave.glowWidth;
                     ctx.stroke();
-
-                    ctx.lineWidth = CONFIG.weave.lineWidthBraid * 1.4;
-                    ctx.beginPath();
-                    ctx.moveTo(str.points[splitIndex].x, str.points[splitIndex].y);
-                    for (let i = splitIndex + 1; i < segs; i++) {
-                        const xc = (str.points[i - 1].x + str.points[i].x) * 0.5;
-                        const yc = (str.points[i - 1].y + str.points[i].y) * 0.5;
-                        ctx.quadraticCurveTo(str.points[i - 1].x, str.points[i - 1].y, xc, yc);
-                    }
-                    ctx.lineTo(str.points[segs - 1].x, str.points[segs - 1].y);
-                    ctx.stroke();
-
-                    ctx.strokeStyle = "#ffffff";
-                    ctx.lineWidth = CONFIG.weave.lineWidthFree;
-                    ctx.beginPath();
-                    ctx.moveTo(str.points[0].x, str.points[0].y);
-                    for (let i = 1; i <= splitIndex; i++) {
-                        const xc = (str.points[i - 1].x + str.points[i].x) * 0.5;
-                        const yc = (str.points[i - 1].y + str.points[i].y) * 0.5;
-                        ctx.quadraticCurveTo(str.points[i - 1].x, str.points[i - 1].y, xc, yc);
-                    }
-                    ctx.lineTo(str.points[splitIndex].x, str.points[splitIndex].y);
-                    ctx.stroke();
-
-                    ctx.lineWidth = CONFIG.weave.lineWidthBraid;
-                    ctx.beginPath();
-                    ctx.moveTo(str.points[splitIndex].x, str.points[splitIndex].y);
-                    for (let i = splitIndex + 1; i < segs; i++) {
-                        const xc = (str.points[i - 1].x + str.points[i].x) * 0.5;
-                        const yc = (str.points[i - 1].y + str.points[i].y) * 0.5;
-                        ctx.quadraticCurveTo(str.points[i - 1].x, str.points[i - 1].y, xc, yc);
-                    }
-                    ctx.lineTo(str.points[segs - 1].x, str.points[segs - 1].y);
-                    ctx.stroke();
-
-                    ctx.restore();
                 }
-
-                if (Math.random() < CONFIG.weave.sparkSpawnProbability) {
-                    const u = 0.15 + Math.random() * 0.75;
-                    const spine = computeBraidSpine(u);
-                    spawnSpark(spine.x, spine.y, spine.tx, spine.ty);
+                ctx.globalAlpha = CONFIG.weave.coreAlpha;
+                ctx.strokeStyle = CONFIG.colors.coreWhite;
+                ctx.lineWidth = CONFIG.weave.coreWidth;
+                ctx.stroke(corePath);
+                ctx.restore();
+                if (Math.random() < CONFIG.weave.sparkSpawnProbability && activeCount > 0) {
+                    const pickStrand = strings[Math.floor(Math.random() * activeCount)];
+                    const pickIdx = Math.floor((0.36 + Math.random() * 0.54) * (segs - 1));
+                    const pt = pickStrand.points[pickIdx];
+                    if (pt) {
+                        spawnSpark(pt.x, pt.y, -0.7, 0.7);
+                    }
                 }
             }
-
             function updateAndRenderSparks() {
                 ctx.save();
                 ctx.globalCompositeOperation = "lighter";
@@ -1373,12 +1249,10 @@
                     sp.vx *= 0.985;
                     sp.vy *= 0.985;
                     sp.life -= 1;
-
                     if (sp.life <= 0) {
                         sparks.splice(i, 1);
                         continue;
                     }
-
                     const alpha = Math.max(0, sp.life / sp.maxLife);
                     ctx.globalAlpha = alpha;
                     ctx.fillStyle = sp.color;
@@ -1388,58 +1262,58 @@
                 }
                 ctx.restore();
             }
-
             function updateCustomCursor() {
                 if (isTouchDevice || !pointer.hasMoved) return;
-
-                cursorDot.style.transform = "translate3d(" + (pointer.x - 2.5) + "px, " + (pointer.y - 2.5) + "px, 0)";
-
+                pointer.smoothX += (pointer.x - pointer.smoothX) * 0.45;
+                pointer.smoothY += (pointer.y - pointer.smoothY) * 0.45;
+                const dotScale = pointer.isDown ? 3.0 : 1.0;
+                cursorDot.style.transform = `translate3d(${pointer.smoothX.toFixed(1)}px, ${pointer.smoothY.toFixed(1)}px, 0) scale(${dotScale})`;
                 const prevDropX = pointer.dropX;
                 const prevDropY = pointer.dropY;
-                pointer.dropX += (pointer.x - pointer.dropX) * CONFIG.cursor.dropletLerp;
-                pointer.dropY += (pointer.y - pointer.dropY) * CONFIG.cursor.dropletLerp;
-
-                pointer.vx = pointer.dropX - prevDropX;
-                pointer.vy = pointer.dropY - prevDropY;
-
-                const speed = Math.hypot(pointer.vx, pointer.vy);
-                if (speed > 0.4) {
-                    pointer.angle = Math.atan2(pointer.vy, pointer.vx);
+                pointer.dropX += (pointer.x - pointer.dropX) * 0.2;
+                pointer.dropY += (pointer.y - pointer.dropY) * 0.2;
+                const vx = pointer.dropX - prevDropX;
+                const vy = pointer.dropY - prevDropY;
+                const speed = Math.hypot(vx, vy);
+                if (speed > 0.35) {
+                    pointer.angle = Math.atan2(vy, vx);
+                } else {
+                    pointer.angle += 0.014;
                 }
-                pointer.spin += CONFIG.cursor.rotationSpeed + speed * 0.003;
-
-                const stretch = Math.min(speed * CONFIG.cursor.stretchFactor, CONFIG.cursor.maxStretch);
-                const scaleX = 1 + stretch;
-                const scaleY = Math.max(0.6, 1 - stretch * 0.45);
-
+                const stretch = Math.min(speed * 0.04, 0.5);
+                const targetDropScale = pointer.isDown ? 0.58 : 1.0;
+                pointer.dropScale += (targetDropScale - pointer.dropScale) * 0.18;
+                const scaleX = (1 + stretch) * pointer.dropScale;
+                const scaleY = Math.max(0.55, 1 - stretch * 0.4) * pointer.dropScale;
                 cursorDroplet.style.transform =
-                    "translate3d(" + (pointer.dropX - 22) + "px, " + (pointer.dropY - 22) + "px, 0) " +
-                    "rotate(" + (pointer.angle + Math.sin(pointer.spin) * 0.18).toFixed(3) + "rad) " +
-                    "scale(" + scaleX.toFixed(3) + ", " + scaleY.toFixed(3) + ")";
-
+                    `translate3d(${pointer.dropX.toFixed(1)}px, ${pointer.dropY.toFixed(1)}px, 0) ` +
+                    `rotate(${pointer.angle.toFixed(3)}rad) ` +
+                    `scale(${scaleX.toFixed(3)}, ${scaleY.toFixed(3)})`;
+                pointer.smoothX += (pointer.x - pointer.smoothX) * 0.45;
+                pointer.smoothY += (pointer.y - pointer.smoothY) * 0.45;
+                const scale = pointer.isDown ? 3.0 : 1.0;
+                cursorDot.style.transform = `translate3d(${pointer.smoothX.toFixed(1)}px, ${pointer.smoothY.toFixed(1)}px, 0) scale(${scale})`;
+                const maxDist = CONFIG.cursor.magneticDistance;
+                const maxDistSq = maxDist * maxDist;
                 for (let i = 0; i < interactiveButtons.length; i++) {
                     const btn = interactiveButtons[i];
                     const rect = btn.getBoundingClientRect();
-                    const cx = rect.left + rect.width * 0.5;
-                    const cy = rect.top + rect.height * 0.5;
-                    const dx = pointer.x - cx;
-                    const dy = pointer.y - cy;
-                    const dist = Math.hypot(dx, dy);
-
+                    const dx = pointer.x - (rect.left + rect.width * 0.5);
+                    const dy = pointer.y - (rect.top + rect.height * 0.5);
+                    const distSq = dx * dx + dy * dy;
                     const relX = ((pointer.x - rect.left) / Math.max(rect.width, 1)) * 100;
                     const relY = ((pointer.y - rect.top) / Math.max(rect.height, 1)) * 100;
                     btn.style.setProperty("--glare-x", relX.toFixed(1) + "%");
                     btn.style.setProperty("--glare-y", relY.toFixed(1) + "%");
-
-                    if (dist < CONFIG.cursor.magneticDistance) {
-                        const pull = (1 - dist / CONFIG.cursor.magneticDistance) * CONFIG.cursor.magneticForce;
-                        btn.style.transform = "translate3d(" + (dx * pull).toFixed(2) + "px, " + (dy * pull).toFixed(2) + "px, 0)";
+                    if (distSq < maxDistSq) {
+                        const dist = Math.sqrt(distSq);
+                        const pull = (1 - dist / maxDist) * CONFIG.cursor.magneticForce;
+                        btn.style.transform = `translate3d(${(dx * pull).toFixed(2)}px, ${(dy * pull).toFixed(2)}px, 0)`;
                     } else {
                         btn.style.transform = "translate3d(0, 0, 0)";
                     }
                 }
             }
-
             function handlePointerCoord(e) {
                 pointer.x = e.clientX;
                 pointer.y = e.clientY;
@@ -1449,64 +1323,81 @@
                     pointer.dropY = e.clientY;
                 }
             }
-
             function bindPointerEvents() {
                 if (!isTouchDevice) {
                     window.addEventListener("pointermove", function (e) {
                         handlePointerCoord(e);
                     }, { passive: true });
+                    window.addEventListener("pointerdown", function (e) {
+                        if (e.button === 2) return;
+                        pointer.isDown = true;
+                    }, { passive: true });
+                    window.addEventListener("pointerup", function (e) {
+                        pointer.isDown = false;
+                    }, { passive: true });
                 }
-
                 window.addEventListener("contextmenu", function (e) {
                     e.preventDefault();
                     handlePointerCoord(e);
                     showContextMenu(e.clientX, e.clientY);
                     return false;
                 }, { passive: false });
-
                 window.addEventListener("click", function (e) {
                     if (!contextMenu.contains(e.target)) {
                         hideContextMenu();
                     }
                 });
             }
-
+            function monitorPerformance(now) {
+                frameCount++;
+                const elapsed = now - lastFpsCheckTime;
+                if (elapsed >= CONFIG.performance.checkIntervalMs) {
+                    const currentFps = (frameCount * 1000) / elapsed;
+                    frameCount = 0;
+                    lastFpsCheckTime = now;
+                    if (currentFps < CONFIG.performance.fpsThreshold) {
+                        lowFpsTimeAccumulator += elapsed;
+                        if (lowFpsTimeAccumulator >= CONFIG.performance.lowFpsDurationThresholdMs && !isLowQualityMode) {
+                            isLowQualityMode = true;
+                            currentSegmentCount = CONFIG.weave.segmentCountLow;
+                            initSegLookup(currentSegmentCount);
+                            maxSparksCount = CONFIG.weave.maxSparksLow;
+                            sparks.length = Math.min(sparks.length, maxSparksCount);
+                            if (dpr > 1) {
+                                dpr = 1;
+                                canvas.width = Math.floor(width);
+                                canvas.height = Math.floor(height);
+                                ctx.setTransform(1, 0, 0, 1, 0, 0);
+                            }
+                        }
+                    } else {
+                        lowFpsTimeAccumulator = Math.max(0, lowFpsTimeAccumulator - elapsed * 0.5);
+                    }
+                }
+            }
             let lastFrameTime = performance.now();
-
             function animate(now) {
-                if (systemTerminated || isAnimationPaused) return;
+                if (isAnimationPaused) return;
                 const deltaMs = now - lastFrameTime;
                 lastFrameTime = now;
-
-                if (deltaMs > CONFIG.security.maxFrameFreezeMs && document.visibilityState === "visible") {
-                    triggerSecurityCrash();
-                    return;
-                }
-
-                const dt = Math.min(deltaMs, 40);
-                time += dt;
-
+                monitorPerformance(now);
+                const dt = Math.min(deltaMs, 32);
+                time += dt * CONFIG.weave.clockFactor;
                 ctx.clearRect(0, 0, width, height);
-
                 updateFieldCoordinates(dt);
                 updateAndRenderStrings(dt);
                 updateAndRenderSparks();
                 updateCustomCursor();
-
                 animFrameId = requestAnimationFrame(animate);
             }
-
-            initSecurityGuards();
+            initSegLookup(currentSegmentCount);
             resizeCanvas();
-            window.addEventListener("resize", resizeCanvas);
+            window.addEventListener("resize", function () {
+                resizeCanvas();
+                initSegLookup(currentSegmentCount);
+            });
             buildContextMenu();
-
-            if (checkRouteIsValid()) {
-                renderPortfolioUI();
-            } else {
-                render404Template();
-            }
-
+            renderPortfolioUI();
             initStrands();
             bindPointerEvents();
             animFrameId = requestAnimationFrame(animate);
